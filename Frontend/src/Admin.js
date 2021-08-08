@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { drizzleReactHooks } from "@drizzle/store";
+import { drizzleReactHooks } from "@drizzle/react-plugin";
 import { newContextComponents } from "@drizzle/react-components";
 
 const { useDrizzle, useDrizzleState } = drizzleReactHooks;
