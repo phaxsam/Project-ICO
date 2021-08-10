@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { drizzleReactHooks } from "@drizzle/react-plugin";
 import { newContextComponents } from "@drizzle/react-components";
-
+import './Admin.css';
 const { useDrizzle, useDrizzleState } = drizzleReactHooks;
 const { ContractForm } = newContextComponents;
 
@@ -25,19 +25,19 @@ export default () => {
 
   return (
     <div>
-      <div>
+      <div className = "container">
         <h2>Start</h2>
         <ContractForm drizzle={drizzle} contract="ICO" method="start" />
       </div>
-      <div>
+      <div className = "container">
         <h2>Whitelist</h2>
         <ContractForm drizzle={drizzle} contract="ICO" method="whitelist" />
       </div>
-      <div>
+      <div className = "container">
         <h2>Release Tokens</h2>
         <ContractForm drizzle={drizzle} contract="ICO" method="release" />
       </div>
-      <div>
+      <div className = "container">
         <h2>Withdraw</h2>
         <ContractForm drizzle={drizzle} contract="ICO" method="withdraw" />
       </div>
