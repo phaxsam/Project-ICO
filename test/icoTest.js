@@ -5,8 +5,8 @@ const Token = artifacts.require("ERC20Token.sol");
 contract("ICO", (accounts) => {
   let ico;
   let token;
-  const name = "Farm-Bit";
-  const symbol = "FB";
+  const name = "FINLESS WAREHOUSE DEFI PROTOCOL";
+  const symbol = "FLES";
   const decimals = 18;
   const initialBalance = web3.utils.toBN(web3.utils.toWei("1000"));
 
@@ -18,7 +18,7 @@ contract("ICO", (accounts) => {
 
   it("should create an ERC20 token", async () => {
     const _name = "FINLESS WAREHOUSE DEFI PROTOCOL";
-    const _symbol = "$FLES";
+    const _symbol = "FLES";
     const _decimals = 18;
     const _initialBalance = web3.utils.toBN(web3.utils.toWei("1"));
 
@@ -28,8 +28,8 @@ contract("ICO", (accounts) => {
 
     const totalSupply = await newToken.totalSupply();
 
-    assert(_name === "Farm-Bit");
-    assert(_symbol === "FB");
+    assert(_name === "FINLESS WAREHOUSE DEFI PROTOCOL");
+    assert(_symbol === "FLES");
     assert(_decimals === 18);
     assert(totalSupply.eq(_initialBalance));
   });
