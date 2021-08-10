@@ -17,8 +17,8 @@ contract("ICO", (accounts) => {
   });
 
   it("should create an ERC20 token", async () => {
-    const _name = "Farm-Bit";
-    const _symbol = "FB";
+    const _name = "FINLESS WAREHOUSE DEFI PROTOCOL";
+    const _symbol = "$FLES";
     const _decimals = 18;
     const _initialBalance = web3.utils.toBN(web3.utils.toWei("1"));
 
