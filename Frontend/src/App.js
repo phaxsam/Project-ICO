@@ -17,18 +17,16 @@ function App() {
       <h1>FINLESS WAREHOUSE DEFI PROTOCOL</h1>
       <DrizzleProvider drizzle={drizzle}>
         <LoadingContainer>
-        <div className="Paragraph-container">
-        <Description/>
-        </div>
+          <div className="Paragraph-container">
+            <Description />
+          </div>
           <ICOInfo />
           <Investor />
           <Admin />
           <h2>Diagram of Project</h2>
           <img src={Diagram} />
-
         </LoadingContainer>
       </DrizzleProvider>
-      
     </div>
   );
 }

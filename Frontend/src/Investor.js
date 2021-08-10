@@ -24,7 +24,14 @@ export default () => {
       </div>
       <div>
         <h2>Buy (token) </h2>
-        <ContractForm drizzle={drizzle} contract="ICO" method="buy" />
+        <ContractForm
+          drizzle={drizzle}
+          contract="ICO"
+          method="buy"
+          render={(tokens) => (
+            <input type="number" placeholder="Investment Amount" />
+          )}
+        />
       </div>
     </div>
   );

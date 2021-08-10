@@ -106,6 +106,7 @@ contract ICO is ReentrancyGuard {
         maxPurchase = _maxPurchase;
     }
 
+    // Buyer must be whitelisted by admin before making a purchase
     function whitelist(address investor) external onlyAdmin {
         investors[investor] = true;
     }
@@ -116,9 +117,11 @@ contract ICO is ReentrancyGuard {
             msg.value >= minPurchase && msg.value <= maxPurchase,
             "MUST SEND BTW MIN AND MAX"
         );
+        // This is where the issue starts
         uint256 quantity = price.mul(msg.value);
         require(quantity <= availableTokens, "not enough tokens left for sale");
         sales.push(Sale(msg.sender, quantity));
+        availableTokens = availableTokens.sub(quantity);
     }
 
     function release()
@@ -133,6 +136,7 @@ contract ICO is ReentrancyGuard {
             Sale storage sale = sales[i];
             tokenInstance.transfer(sale.investor, sale.volume);
         }
+        released = true;
     }
 
     function withdraw(address payable to, uint256 amount)

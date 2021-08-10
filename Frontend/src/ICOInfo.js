@@ -13,6 +13,15 @@ export default () => {
   return (
     <div>
       <div>
+        <h2>Admin</h2>
+        <ContractData
+          drizzle={drizzle}
+          drizzleState={state}
+          contract="ICO"
+          method="admin"
+        />
+      </div>
+      <div>
         <h2>Token</h2>
         <ContractData
           drizzle={drizzle}
@@ -77,15 +86,6 @@ export default () => {
           drizzleState={state}
           contract="ICO"
           method="released"
-        />
-      </div>
-      <div>
-        <h2>Admin</h2>
-        <ContractData
-          drizzle={drizzle}
-          drizzleState={state}
-          contract="ICO"
-          method="admin"
         />
       </div>
     </div>
