@@ -29,7 +29,11 @@ export default () => {
           contract="ICO"
           method="buy"
           render={(tokens) => (
-            <input type="number" placeholder="Investment Amount" />
+            <input
+              type="number"
+              placeholder="Investment Amount"
+              onSubmit={tokens}
+            />
           )}
         />
       </div>

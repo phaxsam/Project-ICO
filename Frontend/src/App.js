@@ -8,6 +8,7 @@ import Investor from "./Investor";
 import Admin from "./Admin";
 import Diagram from "./Assets/Diagram.png";
 import Description from "./Description";
+import "./styles.css";
 const drizzle = new Drizzle(drizzleOptions);
 const { DrizzleProvider } = drizzleReactHooks;
 
